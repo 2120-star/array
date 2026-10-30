@@ -7,6 +7,14 @@ def calculate_average(scores):
     return sum(scores) / len(scores)
 
 
+def find_maximum(scores):
+    return max(scores)
+
+
+def find_minimum(scores):
+    return min(scores)
+
+
 def main():
     scores = list(map(float, input("Enter scores separated by spaces: ").split()))
 
@@ -16,6 +24,8 @@ def main():
 
     print("Sum =", calculate_sum(scores))
     print("Average =", calculate_average(scores))
+    print("Maximum =", find_maximum(scores))
+    print("Minimum =", find_minimum(scores))
 
 
 if __name__ == "__main__":
