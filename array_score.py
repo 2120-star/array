@@ -1,18 +1,12 @@
 
+# Array of Scores - Main Branch
+
 def calculate_sum(scores):
     return sum(scores)
 
 
 def calculate_average(scores):
     return sum(scores) / len(scores)
-
-
-def find_maximum(scores):
-    return max(scores)
-
-
-def find_minimum(scores):
-    return min(scores)
 
 
 def main():
@@ -22,10 +16,12 @@ def main():
         print("Please enter at least one score.")
         return
 
-    print("Sum =", calculate_sum(scores))
-    print("Average =", calculate_average(scores))
-    print("Maximum =", find_maximum(scores))
-    print("Minimum =", find_minimum(scores))
+    total = calculate_sum(scores)
+    average = calculate_average(scores)
+
+    print("Scores:", scores)
+    print("Sum =", total)
+    print("Average =", average)
 
 
 if __name__ == "__main__":
