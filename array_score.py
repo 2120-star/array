@@ -1,5 +1,5 @@
 
-# Array of Scores - Main Branch
+# Array Score Program
 
 def calculate_sum(scores):
     return sum(scores)
@@ -10,18 +10,17 @@ def calculate_average(scores):
 
 
 def main():
-    scores = list(map(float, input("Enter scores separated by spaces: ").split()))
+    n = int(input("Enter number of scores: "))
 
-    if not scores:
-        print("Please enter at least one score.")
-        return
+    scores = []
 
-    total = calculate_sum(scores)
-    average = calculate_average(scores)
+    for i in range(n):
+        score = float(input("Enter score: "))
+        scores.append(score)
 
     print("Scores:", scores)
-    print("Sum =", total)
-    print("Average =", average)
+    print("Sum of scores:", calculate_sum(scores))
+    print("Average of scores:", calculate_average(scores))
 
 
 if __name__ == "__main__":
